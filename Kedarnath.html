@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadarnath homepage</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fefcfc;
+            height: 100%;
+        }
+
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .card {
+            height: 475px;
+            margin: 50px;
+            box-shadow: 5px 5px 20px rgb(75, 69, 75);
+            overflow: hidden;
+            position: relative;
+            width: calc(33.33% - 100px);
+        }
+
+        .card img {
+            height: 100%;
+            width: 100%;
+            border-radius: 2px;
+            background-color: rgb(252, 250, 251);
+        }
+
+        .intro {
+            height: 10px;
+            width: 425px;
+            padding: 6px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 514px;
+            color: rgb(236, 11, 11);
+        }
+
+        h1 {
+            margin: 0px;
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+            margin: -28px;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .size {
+            width: 425px;
+            height: 450px;
+        }
+
+
+
+        nav {
+            background-color: rgb(234, 47, 84);
+            color: #e9e5e5;
+            padding: 40px;
+            text-align: center;
+            position: sticky;
+            top: 0px;
+            z-index: 35;
+        }
+
+
+
+        #cc {
+            border-bottom: 2px solid rgb(224, 24, 24);
+            width: 100%;
+            font-size: 45px;
+            color: red;
+            right: 10px;
+            padding: 10px;
+            margin: 0px;
+        }
+
+        #pp {
+            color: black;
+            width: auto;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .mar {
+            color: red;
+            margin-left: 50px;
+            font-size: 30px;
+        }
+
+        .mar1 {
+            color: red;
+            margin-left: 545px;
+            font-size: 30px;
+        }
+
+        .mar2 {
+            color: red;
+            margin-left: 1030px;
+            font-size: 30px;
+        }
+
+        h2 {
+            height: 0px;
+            margin-left: 35px;
+        }
+
+        .abcd {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: 127px;
+            right: 4px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+        }
+
+        .ab {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: 81px;
+            right: 4px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+        }
+
+        .abc {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: 35px;
+            right: 4px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+        }
+
+        .abc:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+
+        .ab:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+
+        .abcd:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            box-shadow: 5px 5px 20px rgba(236, 4, 4, 0.929);
+            margin-left: 589px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .abcimg {
+            width: 55%;
+            height: 340px;
+            margin-left: 320px;
+            box-shadow: 5px 5px 20px rgb(41, 39, 41);
+        }
+
+        .textq {
+            color: black;
+
+            width: 80%;
+            margin-left: 90px;
+            font-weight: 400;
+
+        }
+
+        .bold {
+            font-size: 17px;
+        }
+
+        .bold1 {
+            margin-left: 230px;
+        }
+
+        .qwe {
+            font-weight: 300;
+            margin-left: 320px;
+        }
+
+        .line {
+            width: 300px;
+            height: 8px;
+        }
+
+        .line1 {
+            width: ;
+            height: 8px;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #121212;
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #121212;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            margin: 0px 0px;
+            padding: 0px 17px;
+        }
+
+        .btn {
+            background-color: #ee3038;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+
+        .slider-btn1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: #ee3038;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .slider-btn-left1 {
+            left: 10px;
+
+        }
+
+        .slider-btn-right1 {
+            right: 10px;
+            z-index: 199;
+        }
+
+        .mread,
+        .dread {
+            text-align: center;
+            color: #121212;
+            font-weight: bold;
+        }
+
+        .dread {
+            margin-bottom: 34px;
+        }
+
+        .title1 {
+            text-align: center;
+            color: #121212;
+            padding: 4px 1px;
+            margin: 0px 0px;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .description1 {
+            font-size: 14px;
+            text-align: justify;
+            color: black;
+            padding: 3px 6px;
+            font-size: 20px;
+            font-weight: 300;
+            /* line-height:1.5; */
+        }
+
+        .slider {
+            position: relative;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 43%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(29, 66, 97, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .slider-btn-left {
+            left: 10px;
+        }
+
+        .slider-btn-right {
+            right: 10px;
+            z-index: 199;
+        }
+
+        .BACKGROUND {
+
+            HEIGHT: 560PX;
+            WIDTH: 90%;
+            left: 0px;
+            margin-left: 83px;
+            margin-right: 20px;
+            MARGIN-TOP: 10PX;
+
+
+            animation: SLIDER 10s INFINITE linear;
+            background-attachment: fixed;
+        }
+
+        @keyframes SLIDER {
+            0% {
+                background-image: URL("https://www.bontravelindia.com/wp-content/uploads/2021/10/Kedarnath-Temple-Uttarakhand.jpg")
+            }
+
+            200% {
+                background-image: URL("https://badrinath-kedarnath.gov.in/Assets/Images/kedaarnath.jpg")
+            }
+
+            50% {
+                background-image: URL("https://indiathrills.com/wp-content/uploads/2022/09/Haridwar-to-Kedarnath-Dham-Tour-Package-1.jpg")
+            }
+
+            75% {
+                background-image: URL("https://media.istockphoto.com/id/515855602/photo/kedarnath-in-india.jpg?s=612x612&w=0&k=20&c=_KmnQbbvqRftKusDTU_JUjVM3V80Mo2jBqaCNx948us=")
+            }
+
+            100% {
+                background-image: URL("https://www.livemint.com/lm-img/img/2023/04/25/1600x900/Kedarnath_1676670273669_1682382667707.jpg")
+            }
+        }
+
+        .meet {
+            text-align: center;
+            color: rgb(236, 13, 13);
+            font-size: 45px;
+
+        }
+
+        .meet1 {
+            text-align: center;
+            color: rgb(60, 55, 55);
+            font-size: 25px;
+
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 20px;
+            flex: 0 0 calc(14.2857% - 40px);
+            /* Distribute available space equally for 6 members */
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        .poiu {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .down {
+            background-color: #0d2dcd;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .flink {
+            color: #1a4858;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .downtab {
+            width: 100%;
+            height: 240px;
+            background-color: #f9f4f0;
+        }
+
+        .sec1 {
+            margin-left: 20px;
+        }
+
+        .sec2 {
+            margin-left: 520px;
+            margin-top: -50px;
+        }
+
+        .sec3 {
+            margin-left: 1100px;
+            margin-top: -80px;
+        }
+
+        .sec4 {
+            margin-left: 4px;
+            margin-top: 55px;
+        }
+
+        .slider-btn-left-2 {
+            left: 10px;
+        }
+
+        .slider-btn-right-2 {
+            right: 10px;
+            z-index: 199;
+        }
+
+        .slider {
+            position: relative;
+        }
+
+        .slider-container-2 {
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slider-btn-2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(29, 66, 97, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .slider-btn-left-2 {
+            left: 10px;
+        }
+
+        .slider-btn-right-2 {
+            right: 10px;
+            z-index: 199;
+        }
+
+        .downtext {
+            margin-left: 30px;
+            margin-top: -2px;
+            color: #555;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .asd {
+            margin-left: 155px;
+            margin-top: -20px;
+            font-size: 12px;
+        }
+
+        .asd1 {
+            font-size: 20px;
+            color: rgb(224, 24, 24);
+            margin-left: 66px;
+        }
+
+        .asd2 {
+            font-size: 20px;
+            color: rgb(224, 24, 24);
+            margin-left: 81px;
+            margin-top: -16px;
+        }
+
+        .asd3 {
+            font-size: 10px;
+            color: rgb(224, 24, 24);
+            margin-left: 12px;
+        }
+
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-left: 300px;
+            margin-top: -10px;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        .issue {
+            background-color: rgb(181, 178, 178);
+            object-fit: cover;
+            width: 100%;
+            height: 280px;
+        }
+
+
+        .form-container1 {
+            text-align: center;
+        }
+
+        .form-group1 {
+            display: inline-block;
+            margin-right: 10px;
+            /* Adjust the margin as needed */
+            margin-bottom: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        .gallery-container00 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery00 {
+            display: flex;
+            overflow-x: auto;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+            white-space: nowrap;
+            transition: transform 0.3s ease;
+            /* Add transition for smoother scrolling */
+        }
+
+        .gallery00 img {
+            flex: 0 0 auto;
+            justify-content: space-between;
+            width: calc(100% / 4);
+            /* Adjust the width for the number of images in one row */
+            height: 200px;
+            scroll-snap-align: start;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .video {
+            width: 30%;
+            /* Adjust the width as needed */
+            margin-right: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        #whatsapp-icon {
+            position: fixed;
+            bottom: 45px;
+            left: 6px;
+            z-index: 1000;
+        }
+
+        #whatsapp-icon img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo img {
+            position: absolute;
+            left: 2px;
+            top: -5px;
+            width: 35vh;
+            height: 126px;
+            max-height: 178px;
+        }
+        .back12 {
+
+            background-image: url('https://getwallpapers.com/wallpaper/full/8/6/9/1509663-popular-3000-2000-wallpaper-3000x2000-desktop.jpg');
+            background-size: cover;
+            height: 475px;
+            margin: 50px;
+            box-shadow: 5px 5px 20px rgb(75, 69, 75);
+            overflow: hidden;
+            position: relative;
+            width: calc(33.33% - 100px);
+
+        }
+    </style>
+    <nav>
+        <h1>Kedaranath</h1>
+        <div class="logo">
+            <a href="firstpage.html">
+            <img src="LOGO.jpg" alt="Logo"></a>
+        </div>
+
+    </nav>
+
+    <DIV CLASS="BACKGROUND">
+    </DIV>
+
+    <h1 id="cc"> Explore : Kedaranath </h1>
+    <h6 id="pp">
+        Kedarnath Temple (Sanskrit: केदारनाथ मंदिर, IAST: Kēdāranātha Mandira, lit. 'temple of the God of the field') is
+        a Hindu temple, one of the twelve jyotirlinga of Shiva. The temple is located on the Garhwal Himalayan
+        range[citation needed] near the Mandakini river, in the state of Uttarakhand, India. Due to extreme weather
+        conditions, the temple is open to the general public only between the months of April (Akshaya Tritiya) and
+        November (Kartik Purnima, the autumn full moon). During the winters, the vigraha (deity) of the temple is
+        carried down to Ukhimath to be worshipped for the next six months. Kedarnath is seen as a homogeneous form of
+        Shiva, the 'Lord of Kedarkhand', the historical name of the region.[1]
+
+
+        <br>
+        <br>
+
+        The temple is not directly accessible by road and has to be reached by a 22 kilometres (14 mi) uphill trek from
+        Gaurikund. Pony, mule and manchan service is available to reach the temple. According to Hindu legends, the
+        temple was initially built by the Pandavas, and is one of the twelve Jyotirlingas, the holiest Hindu shrines of
+        Shiva.[2]
+
+
+    </h6>
+
+    </nav>
+    <h1 id="cc">Famous Place which you going to see in Kadaranath</h1>
+
+    <div class="mar">
+        <h2>Kedarnath Temple</h2>
+    </div>
+    <div class="mar1">
+        <h2>Adi Shankaracharya</h2>
+    </div>
+    <div class="mar2">
+        <h2>Bhairavnath</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMCLMBZ4Oa11R0EZ3Uk1eVUdtoG061cy2C8O4Uz=s1360-w1360-h1020"
+                alt="Banner" class="size">
+
+        </div>
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNyakUyVZ4Xwyw_qRDZKBPGHyEHgChX6EkGwAfl=s1360-w1360-h1020"
+                alt="Thiksey Monasteryr" class="size">
+
+        </div>
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPDccPVSwikyCsMAZ4gpnKnhfJX2KtpvqgIX9EC=s1360-w1360-h1020"
+                alt="Banner" class="size">
+        </div>
+
+    </div>
+
+
+
+
+    <h3 id="cc">Kadaranath : An Overview</h3>
+    <br>
+    <img class="abcimg"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Majestic_view_of_kedarnath.jpg/1280px-Majestic_view_of_kedarnath.jpg">
+    <br>
+    <br>
+    <h3 class="textq">
+        Kedarnath is a town and Nagar Panchayat in Rudraprayag district of Uttarakhand, India, known primarily for the
+        Kedarnath Temple. It is approximately 86 kilometres from Rudraprayag, the district headquarter. Kedarnath is the
+        most remote of the four Chota Char Dham pilgrimage sites.
+
+        <br>
+        <br>
+
+        It is located in the Himalayas, about 3,583 m (11,755
+        ft) above sea level near the Chorabari Glacier, which is the source of the Mandakini river. The town is flanked
+        by snow-capped peaks, most prominently the Kedarnath Mountain. The nearest road head is at Gaurikund about 16 km
+        away. The town suffered extensive destruction during June 2013 from the Flash Floods caused by torrential rains
+        in Uttarakhand state.[4]
+
+    </h3>
+    <br>
+    <br>
+    <h3 id="cc">How to Reach : Kadaranath</h3>
+    <br>
+    <img class="abcimg"
+        src="https://www.pilgrimagetour.in/blog/wp-content/uploads/2023/08/Kedarnath-Yatra-Route-Map.jpg">
+    <br>
+
+    <h3 class="textq">Before you embark on your Trip to Kadaranath, planning your trip carefully is
+        essential. Here are some important things you should consider way to reach Kadarnath .Hope its going to help you
+        :
+        <br>
+        <ol>
+            <li>
+                <h3 class="bold">By Air :<span style="font-weight: 400;">
+
+                        The most expedient and efficient way of getting to the auspicious destination of Kedarnath is
+                        via air. Due to the altitude and location of the state of Uttarakhand, the Char Dham Yatra
+                        pilgrimage can be quite strenuous. This means one would most likely want to reach the base camp
+                        of Gaurikund as quickly as possible, reserving all energy for the uphill trek to Kedarnath.
+                        <br>
+                        While Kedarnath doesn’t operate its own aerodrome, individuals can avail of the nearest air hub
+                        in Dehradun. Jolly Grant Airport is situated approximately 238 to 250 km from Kedarnath, playing
+                        a pivotal role in Uttarakhand tourism. The airport is well connected to major cities such as
+                        Delhi, Mumbai, Bangalore, Chennai, Kolkata and Lucknow. Individuals may select from the
+                        following carriers – IndiGo, Spice Jet and Air India. In terms of the fastest route, New Delhi’s
+                        Indira Gandhi International airport is only 260 km away, offering a flight duration of 45
+                        minutes to an hour. Upon arrival, individuals may select from general, prepaid and private taxis
+                        as well as the city bus service to reach Kedarnath.
+                        <br>
+                        Jolly Grant Airport is equipped with all the necessary facilities, including high-speed WiFi,
+                        infotainment, buffet and bar services. This means travellers can breathe a sigh of relief as
+                        their arrival will be met with a host of amenities.
+                    </span></h3>
+            </li>
+            <li>
+                <h3 class="bold"> By Road :<span style="font-weight: 400;">
+                        In order to get to Kedarnath by road, travellers will have to get to the capital city of Delhi
+                        first. From Delhi, one can reach Dehradun by flight, train or bus. It is from Dehradun that you
+                        will be making your way to Haridwar and from this sacred city you will be heading for the path
+                        that leads to the Kedarnath trek. There are two major interstate bus depots from Delhi that
+                        schedule regular buses to Dehradun, namely - Kashmere Gate Bus Terminal and Anand Vihar Bus
+                        Terminal. Individuals may select from A/C sleeper, non-A/C sleeper, Volvo A/C, Volvo A/C and
+                        semi-sleeper buses, depending upon their needs.
+                        <br>
+                        We have chalked out a rough road route for you to get a sense of the magnitude of the journey:
+                        New Delhi > Haridwar (206 km) > Rishikesh (24 km) > Devprayag (74 km) > Srinagar (34 km) >
+                        Rudraprayag (33 km) > Gaurikund (via Augustmuni > Guptkashi > Phata > Sitapur > Sonprayag (74
+                        km) > Kedarnath by trek (16 km).
+                        <br>
+                        Take note that this is a long and exhausting commute. We’d recommend getting to Gaurikund as
+                        quickly as possible, as the trip ahead is even more physically taxing.
+
+                    </span>
+                </h3>
+            </li>
+            <li>
+                <h3 class="bold"> By Train :<span style="font-weight: 400;">
+                        For those looking for a more cost-effective transportation medium, there are options available
+                        to you. However, bear in mind that this increases the duration of your commute significantly as
+                        the destination is a starting point to another journey itself.
+                        <br>
+                        Although there isn’t a railway junction in Kedarnath, individuals can avail of the railhead at
+                        Rishikesh. Situated approximately 210 km from Gaurikund, Rishikesh Railway Station is well
+                        connected to the capital city. Individuals may hop onto a fast train from Delhi to Rishikesh,
+                        which will take approximately 8 hours in duration. Upon arrival, there are regular buses that
+                        ply to the base camp, from which the trek begins.
+
+
+                    </span></h3>
+            </li>
+            <!--add more imfo if you want-->
+
+        </ol>
+    </h3>
+
+    <h3 id="cc">View All the pakages for </h3>
+    <br>
+    <section>
+        <div class="slider">
+            <div class="slider-container-2">
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:40rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://i1.wp.com/www.navuttarakhand.com/wp-content/uploads/2016/10/Trekking-Routes-Kedarnath.jpg?fit=914%2C568&ssl=1"
+                            alt="">
+                        <div class="card-body">
+                            <h3 class="downtext">5 Days / 4 nights</h3>
+
+                        </div>
+                        <div class="divv">
+                            <h1 class="asd1"> Kadarnath Tour Package </h1>
+                            <br>
+                            <h1 class="asd3">Starting from </h1>
+                            <h1 class="asd2"> ₹ 3999*</h1>
+                            <h1 class="asd">/Per Person</h1>
+                            <ul>
+                                <li><span>
+                                        Delhi - Haridwar - Guptakashi - Kedarnath - Guptkashi - Rishikesh - Delhi
+
+                                    </span></li>
+                            </ul>
+                            <h1 style="font-size: 18px;color:red; margin-left: 10PX" ;>Highlights/Inclusions:</h1>
+                            <ul style="margin-left: 15PX;color:#555">
+                                <li>Welcome drink on arrival</li>
+                                <li>2 Nights Overnight Journey Delhi-Kadarnath-Delhi</li>
+                                <li>2 Nights/3 Days Stay in 3 Star Hotel</li>
+                                <li>Price Valid for group of 3 Adults</li>
+                                <li>Rates may vary for Blackout dates.</li>
+                            </ul>
+                            <a href="newbook.html" style="text-decoration: none;">
+                                <button class="button-85" role="button">Book Now</button></a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:40rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://www.trekpanda.in/system/images/000/524/617/2e6a4a1b17e69aa83cd718d5cbef6e59/x1000gt/akshay-syal-5vDTocCCutE-unsplash__1_.jpg?1681201988"
+                            alt="">
+                        <div class="card-body">
+                            <h3 class="downtext">6 Days / 5 nights</h3>
+
+                        </div>
+                        <div class="divv">
+                            <h1 class="asd1">Special Kadaranath Tour Package </h1>
+                            <br>
+                            <h1 class="asd3">Starting from </h1>
+                            <h1 class="asd2"> ₹ 7999*</h1>
+                            <h1 class="asd">/Per Person</h1>
+                            <ul>
+                                <li><span>
+                                        Delhi - Haridwar - Guptakashi - Kedarnath - Guptkashi - Rishikesh - Delhi
+
+                                    </span></li>
+                            </ul>
+                            <h1 style="font-size: 18px;color:red; margin-left: 10PX" ;>Highlights/Inclusions:</h1>
+                            <ul style="margin-left: 15PX;color:#555">
+                                <li>Welcome drink on arrival</li>
+                                <li>2 Nights Overnight Journey Delhi-Kadarnath-Delhi</li>
+                                <li>2 Nights/3 Days Stay in 4 Star Hotel</li>
+                                <li>Price Valid for group of 5 Adults</li>
+                                <li>Rates may vary for Blackout dates.</li>
+                            </ul>
+                            <a href="newbook.html" style="text-decoration: none;">
+                                <button class="button-85" role="button">Book Now</button></a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:40rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://chardhamtravel.com/images/chardham-tour/kedarnath-tour.jpg">
+                        <div class="card-body">
+                            <h3 class="downtext">5 Days / 4 nights</h3>
+
+                        </div>
+                        <div class="divv">
+                            <h1 class="asd1"> Discount offer for kadarnath tour package</h1>
+                            <br>
+                            <h1 class="asd3">Starting from </h1>
+                            <h1 class="asd2"> ₹9999*</h1>
+                            <h1 class="asd">/Per Person</h1>
+                            <ul>
+                                <li><span>
+                                        Delhi - Haridwar - Guptakashi - Kedarnath - Guptkashi - Rishikesh - Delhi
+                                    </span></li>
+                            </ul>
+                            <h1 style="font-size: 18px;color:red; margin-left: 10PX" ;>Highlights/Inclusions:</h1>
+                            <ul style="margin-left: 15PX;color:#555">
+                                <li>Welcome drink on arrival</li>
+                                <li>3 Nights Overnight Journey Delhi-Manali-Delhi</li>
+                                <li>3 Nights/3 Days Stay in 5 Star Hotel</li>
+                                <li>Price Valid for group of 4 Adults</li>
+                                <li>Rates may vary for Blackout dates.</li>
+                            </ul>
+                            <a href="newbook.html" style="text-decoration: none;">
+                                <button class="button-85" role="button">Book Now</button></a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:40rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://indiathrills.com/wp-content/uploads/2023/03/Kedarnath-tour-Packages.jpg"
+                            alt="">
+                        <div class="card-body">
+                            <h3 class="downtext">6 Days / 5 nights</h3>
+
+                        </div>
+                        <div class="divv">
+                            <h1 class="asd1"> Kadaranath tour pacakages </h1>
+                            <br>
+                            <h1 class="asd3">Starting from </h1>
+                            <h1 class="asd2"> ₹13999*</h1>
+                            <h1 class="asd">/Per Person</h1>
+                            <ul>
+                                <li><span>
+                                        Delhi - Haridwar - Guptakashi - Kedarnath - Guptkashi - Rishikesh - Delhi
+
+                                    </span></li>
+                            </ul>
+                            <h1 style="font-size: 18px;color:red; margin-left: 10PX" ;>Highlights/Inclusions:</h1>
+                            <ul style="margin-left: 15PX;color:#555">
+                                <li>Welcome drink on arrival</li>
+                                <li>2 Nights Overnight Journey Delhi-Kadarnath-Delhi</li>
+                                <li>2 Nights/3 Days Stay in 5 Star Hotel</li>
+                                <li>Price Valid for group of 5 Adults</li>
+                                <li>Rates may vary for Blackout dates.</li>
+                            </ul>
+                            <a href="newbook.html" style="text-decoration: none;">
+                                <button class="button-85" role="button">Book Now</button></a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col" style="margin-top:20px">
+                    <div class="back12" style="width:27rem ;height:40rem;margin-left:0px;border-radius:20px">
+
+                        <div class="card-body">
+
+
+                        </div>
+                        <div class="divv">
+
+                            <h1 style="font-size: 58px;
+                            color: #f2eaea;
+                            margin-top: 110px;
+                            margin-left: 50PX;">Customize<br> your<br> trek <br>by own - </h1>
+
+                            <a href="working1.html" style="text-decoration: none;">
+                                <button class="button-85" role="button">Click Here</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <button class="slider-btn slider-btn-left-2">&#8249;</button>
+            <button class="slider-btn slider-btn-right-2">&#8250;</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container2 = document.querySelector(".slider-container-2");
+            const leftButton2 = document.querySelector(".slider-btn-left-2");
+            const rightButton2 = document.querySelector(".slider-btn-right-2");
+
+            // Function to move the second slider to the left
+            const moveLeft2 = () => {
+                container2.scrollBy({
+                    left: -300, // Adjust the scroll distance as needed
+                    behavior: "smooth",
+                });
+            };
+
+            // Function to move the second slider to the right
+            const moveRight2 = () => {
+                container2.scrollBy({
+                    left: 300, // Adjust the scroll distance as needed
+                    behavior: "smooth",
+                });
+            };
+
+            // Attach click event listeners to the second slider buttons
+            leftButton2.addEventListener("click", moveLeft2);
+            rightButton2.addEventListener("click", moveRight2);
+        });
+    </script>
+
+
+    <div class="issue">
+        <div class="form-container1"> Talk to our trip experts now to get the best deal
+
+            <br>
+            <br>
+            <h1 class="qwert" style="color: red;font-size:40px;">Not sure which package to pick
+                for Manali?</h1>
+            <br>
+            <h1 class="qwert" style="color: rgb(60, 101, 107);font-size:30px;">Talk to our trip experts now to get the
+                best deal</h1>
+            <br>
+            <br>
+
+            <form action="#" method="post">
+                <div class="form-group1">
+                    <label for="firstName" style="color: white;font-size:20px;">Your Name:</label>
+                    <input style="border-color: red;" type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group1">
+                    <label for="Email" style="color: white;font-size:20px;">Your Email:</label>
+                    <input style="border-color: red;" type="text" id="Email" name="Email" required>
+                </div>
+
+                <div class="form-group1">
+                    <label for="Mobile Number" style="color: white;font-size:20px;">Mobile Number:</label>
+                    <input style="border-color: red;" type="mbno" id="mbno" name="mbno" required>
+                </div>
+
+                <div class="form-group1">
+                    <button class="button-85" role="button" style="margin-left: 20px;">Get Callback</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div style="height: 50px;width:100%;text-align:center;">
+        <h1>
+            Pay online securly
+        </h1>
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScM86KVcDGpL0nnA6g-5EAwpQxj3xUe2ZuQpoFgzPW_NmP24TG7MrSeGgwUihwyuT2Ohk&usqp=CAU">
+        <img style="margin-left: 30px;margin-top:-10px"
+            src="https://www.euttaranchal.com/tourism/_imgs/pay-logos-1.png">
+        <img src="https://www.euttaranchal.com/tourism/_imgs/pay-logos-2.png">
+    </div>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;color:orange;font: size 90px;"><u>Client Testimonials
+        </u> </h1>
+    <br>
+
+    <div class="video-container">
+        <video class="video" style="height: 500px;" controls>
+            <source src="Kadarnath1.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video class="video" style="height: 500px;" controls style="height: 500px;">
+            <source src="Kadarnath2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video class="video" style="height: 500px;" controls>
+            <source src="Kadarnath1.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    <br>
+    <br>
+    <h3 id="cc">Gallery</h3>
+    <br>
+    <br>
+    <div class="gallery-container00">
+        <div class="gallery00">
+            <img src="https://www.taleof2backpackers.com/wp-content/uploads/2021/01/Trekking-on-Kedarnath-Yatra-1024x576.jpg"
+                alt="Image">
+            <img src="https://theroutecause.com/wp-content/uploads/2022/08/Kedarnath-Trek-6.jpg" alt="Image">
+            <img src="https://www.taleof2backpackers.com/wp-content/uploads/2021/01/Kedarnath-Trek-Chardham-Yatra.jpg"
+                alt="Image">
+            <img src="https://static.toiimg.com/thumb/msid-99744877,width-1280,height-720,resizemode-4/99744877.jpg"
+                alt="Image">
+            <img src="https://pahadilog.com/wp-content/uploads/2023/03/Kedarnath-Dham-Uttarakhand.jpg" alt="Image">
+            <img src="https://infiniteadventureclub.com/wp-content/uploads/2021/12/1568445503_climb_2.jpg.jpg"
+                alt="Image">
+            <img src="https://trekventure.in/wp-content/uploads/2023/05/Kedarnath-trek-Trek-Venture.jpg" alt="Image">
+            <img src="https://traxplorers.com/wp-content/uploads/2018/07/IMG_20180707_075205.jpg" alt="Image">
+            <img src="https://www.taleof2backpackers.com/wp-content/uploads/2021/01/Kedarnath-Trek-Chardham-Yatra.jpg"
+                alt="Image">
+            <img src="https://www.himalayasgriffon.com/kedarkantha-trek/og-image.jpg" alt="Image">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3 id="cc">Things to Do in Kadarnath </h3>
+    <br>
+    <img class="abcimg"
+        src="https://wanderon.in/_next/image?url=https%3A%2F%2Fdr7f10k1l6bnm.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F03%2Fpackage.jpg%E2%80%9D&w=1920&q=75">
+
+    <h3 class="textq">Make the most of Kadarnath by indulging in some adventure activities like paragliding, trekking,
+        river rafting, et al and skiing in winters. Rent a bike to move around the markets of the city buying some of
+        the finest woolen apparels, wooden handicrafts, and apple and lingad pickles.
+        <br>
+        <ol>
+            <li>
+                <h3 class="bold">Visit Monasteries :<span style="font-weight: 400;">There are numerous monasteries,
+                        including the famous Hemis Monastery, Thiksey Monastery, and Diskit Monastery. Visitors
+                        can explore the rich culture and traditions of the region through these monasteries.</span></h3>
+            </li>
+            <li>
+                <h3 class="bold">Explore Lakes :<span style="font-weight: 400;">There are numerous monasteries,
+                        including
+                        the famous Hemis Monastery, Thiksey Monastery, and Diskit Monastery. Visitors can explore the
+                        rich culture and traditions of the region through these monasteries.
+                    </span></h3>
+            </li>
+            <li>
+                <h3 class="bold">Trekking :<span style="font-weight: 400;">There are several trekking spots ,
+                        including the Markha Valley Trek, Chadar Trek, and Stok Kangri Trek. These treks offer a unique
+                        perspective of the region’s natural beauty and are a must-do for adventure enthusiasts.
+                    </span></h3>
+            </li>
+            <li>
+                <h3 class="bold">River Rafting :<span style="font-weight: 400;">The Zanskar River offers
+                        some of India’s best river rafting experiences. The river runs through a narrow gorge, and
+                        visitors can enjoy the thrill of navigating the rapids.
+                    </span></h3>
+            </li>
+            <li>
+                <h3 class="bold">Shopping :<span style="font-weight: 400;"> is also known for its unique
+                        handicrafts
+                        and souvenirs. Visitors can buy traditional Tibetan and Ladakhi handicrafts, such as prayer
+                        wheels, thangkas, and pashmina shawls, at the local markets in Leh.
+                    </span></h3>
+            </li>
+            <!--add more imfo if you want-->
+
+        </ol>
+    </h3>
+    <br>
+    <br>
+    <br>
+    <h3 id="cc">Route and Itinerary</h3>
+    <br>
+    <img class="abcimg"
+        src="https://wanderon.in/_next/image?url=https%3A%2F%2Fdr7f10k1l6bnm.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F04%2Fmd-efthakhar-ui-alam-jjlohvr7n8q-unsplash.jpg%E2%80%9D&w=1920&q=75">
+
+
+    <section>
+        <h2 class="mread">The road trip to Manli is not just about the destination you visit but also the journey.
+            Here’s a sample itinerary for a road trip to Manali:</h2>
+        <br>
+        <br>
+        <img class="line1" src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+            alt="separator">
+        <div class="slider">
+            <div class="slider-container">
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://media1.thrillophilia.com/filestore/kf5427mzkof5n6s9r065811kjhfx_DyzbJRPU8AIPZbP.jpg?dpr=1.25&w=1536"
+                            alt="Delhi">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Day 1:Delhi to Haridwar </h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" , alt="separator">
+                            <span style="font-weight: 300;color:#ee3038">The driver will pick you up from Delhi and drop
+                                you off at your pre-booked hotel in Haridwar.
+
+                                <br> After completing the check-in formalities, the rest day is at leisure.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://media1.thrillophilia.com/filestore/c7inp4zg4692wo17ht8vpbs55x0a_outlooktraveller_2Fimport_2Fpublic_2Fuploads_2Ffilemanager_2Fimages_2FGanga-advertorial-(3).jpg?dpr=1.25&w=1536">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Day 2: Haridwar to Guptakashi</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <span style="color:#ee3038;font-weight: 300;">Early morning after having a healthy
+                                breakfast, the driver will help you with the transfer from Haridwar to Guptakashi.
+                                <br>
+                                As you reach Guptakashi complete the check-in formalities and in the evening explore the
+                                local Mandirs and Markets (on your own).
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://media1.thrillophilia.com/filestore/wnfivn96q8nri5a5zrps2oko49di_ual846y49uleg298oq9kffngmzt8_67a8n2g79pkeacr63dgenndsn82q_1588319388_shutterstock_1429634834.jpg?dpr=1.25&w=1536"
+                            alt="Snowfall in These Slopes Signal The Onset of Winter in the Himalayas">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Day 3:Guptkashi to Kedarnath </h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <span style="color:#ee3038;font-weight: 300;">Get ready early morning and have a healthy
+                                breakfast, the driver will help you with the transfer from Guptakashi to Sonprayag from
+                                where you will board a government vehicle to Gaurikund from the Kedarnath trek
+                                start.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;"
+                            src="https://media1.thrillophilia.com/filestore/cj5wdzervnixt0zn3r3qelilp60m_shutterstock_168234986-scaled.jpg?dpr=1.25&w=1536"
+                            alt="Do&#8217;s and Don&#8217;ts for Kedarkantha Trek">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Day 4: Kedarnath to Guptkashi </h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <span style="color:#ee3038;font-weight: 300;">After having a healthy breakfast, the driver
+                                will pick you up from the hotel and drop you off at the hotel in Rishikesh.<br>
+                                After completing the check-in formalities, the driver will take you to the local
+                                sightseeing of Rishikesh.<br>
+                                Post-sightseeing, get transferred to your hotel for an overnight stay and dinner.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src="https://media1.thrillophilia.com/filestore/h9nn7gni1gd8ui1ddvl6591rh3v9_w1o5gbc3stg2ihpni696de71lt5f_okuf6yf58kkn9f0zn34fbeizo9bl_ymzoauwolm4bzs9hzwnu55hq2ut7_1592920297_shutterstock_1005613216.jpg?dpr=1.25&w=1536"
+                            alt="Do&#8217;s and Don&#8217;ts for Kedarkantha Trek">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Day 5: Guptkashi to Rishikesh</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <span style="color:#ee3038;font-weight: 300;">Post breakfast embarks the journey to Leh
+                                which is 230 kilometers from Kargil town. En-route visit the ancient rock-cut statue of
+                                Maitreya Buddha at Mulbekh village. Later stop for a photo at lunar-like landscapes near
+                                Lamayuru Monastery. On the way, enjoy a mouth tempting lunch and photo stop at the
+                                Sangam of Indus and Zanskar rivers. By the evening, arrive Leh and check-in at the hotel
+                                in Leh. The rest of the time is at your leisure. You can explore the market of Leh or
+                                rest in your hotel.
+                                <br>
+                                <br>
+                                Overnight stay at the hotel in Leh.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src=""
+                            alt="Do&#8217;s and Don&#8217;ts for Kedarkantha Trek">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Day 6: Departure | Bid Farewell</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <span style="color:#ee3038;font-weight: 300;">After having a healthy breakfast and
+                                completing the check-out formalities, the driver will help you with the transfer from
+                                Rishikesh to a pre-decided spot in Delhi.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="slider-btn slider-btn-left">&#8249;</button>
+            <button class="slider-btn slider-btn-right">&#8250;</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector(".slider-container");
+            const leftButton = document.querySelector(".slider-btn-left");
+            const rightButton = document.querySelector(".slider-btn-right");
+
+            // Function to move the slider to the left
+            const moveLeft = () => {
+                container.scrollBy({
+                    left: -300, // Adjust the scroll distance as needed
+                    behavior: "smooth",
+                });
+            };
+
+            // Function to move the slider to the right
+            const moveRight = () => {
+                container.scrollBy({
+                    left: 300, // Adjust the scroll distance as needed
+                    behavior: "smooth",
+                });
+            };
+
+            // Attach click event listeners to the buttons
+            leftButton.addEventListener("click", moveLeft);
+            rightButton.addEventListener("click", moveRight);
+        });
+    </script>
+    <br>
+    <br>
+    <h1 class="meet">Meet Our team</h1>
+    <h4 class="meet1">All the memeber in our team are professional</h4>
+
+    <section class="team-members">
+        <section class="team-member">
+            <img class="poiu" src="https://miro.medium.com/v2/resize:fit:1000/1*noCskj8yVY-c6RPmj6-j5w.jpeg"
+                alt="Team Member 1">
+            <h2>Niraj Singh</h2>
+            <BR>
+
+        </section>
+
+        <section class="team-member">
+            <img class="poiu" src="https://miro.medium.com/v2/resize:fit:1000/1*noCskj8yVY-c6RPmj6-j5w.jpeg"
+                alt="Team Member 2">
+            <h2>Pankaj yadav</h2>
+            <BR>
+
+        </section>
+
+        <section class="team-member">
+            <img class="poiu" src="https://miro.medium.com/v2/resize:fit:1000/1*noCskj8yVY-c6RPmj6-j5w.jpeg"
+                alt="Team Member 3">
+            <h2>Pragati Gupta</h2>
+            <BR>
+
+        </section>
+
+        <section class="team-member">
+            <img class="poiu" src="https://miro.medium.com/v2/resize:fit:1000/1*noCskj8yVY-c6RPmj6-j5w.jpeg"
+                alt="Team Member 4">
+            <h2>Kavita yadav</h2><br>
+
+        </section>
+
+        <section class="team-member">
+            <img class="poiu" src="https://miro.medium.com/v2/resize:fit:1000/1*noCskj8yVY-c6RPmj6-j5w.jpeg"
+                alt="Team Member 5">
+            <h2>Akansha Diwaker</h2>
+            <br>
+
+        </section>
+    </section>
+    <br>
+    <br>
+    <div class="downtab" style="border-color: #ee3038;">
+        <div class="sec1">
+            <br>
+
+            <h1 style="color: red;font-size: 25px;"> Don't wait any longer. Contact us!</h1>
+            <br>
+            <img src="https://www.lehladakhindia.com/images/svg/call.svg" width="27" height="27">
+            <a style="color: black;text-decoration: none;" href="tel:+(91)8382085044">+(91)8382085044</a>
+            <br>
+            <img src="https://www.lehladakhindia.com/images/svg/call.svg" width="27" height="27">
+            <a style="color: black;text-decoration: none;" href="tel:+(91)9532226695">+(91)9532226695</a>
+        </div>
+        <div class="sec2">
+            <svg width="28" height="28" fill="#162652" class="bd-placeholder-img" viewBox="0 0 16 16">
+                <path
+                    d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z" />
+
+            </svg>
+            <a style="text-decoration: none;font-size: 25px;"
+                href="mailto:nirajsingh19982017@gmail.com">nirajsingh19982017@gmail.com</a>
+        </div>
+        <div class="sec3">
+            <h1 style="color:#ee0814;font-size: 25px;">Follow us</h1>
+
+            <a href="">
+                <svg enable-background="new 0 0 24 24" height="35" viewBox="0 0 24 24" width="30" fill="#3a5696">
+                    <path
+                        d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+                </svg></a>
+            <a href="">
+                <svg width="30" height="36" fill="#2ba6df" viewBox="0 0 16 16">
+                    <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                </svg>
+            </a>
+
+
+            <a href="">
+                <img src="https://www.holidify.com/res/images/Instagram-Logo.png" alt="instagram"
+                    style="height:33px;"></a>
+
+            <br>
+        </div>
+        <div class="sec4">
+            <h1 style="font-size: 25px; margin-left: 4px;">Need help with tour packages?</h1>
+            <br>
+            <a href="oklp.html" style="text-decoration: none; font-size: 20px;">Fill this form to get callback</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="whatsapp-icon">
+        <a href="https://wa.me/+918382085044" target="_blank">
+            <img src="data:image/jpeg;base64,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
