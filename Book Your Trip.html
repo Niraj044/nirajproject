@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/niraj%20singh/Desktop/project/Newbook.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://getwallpapers.com/wallpaper/full/8/6/9/1509663-popular-3000-2000-wallpaper-3000x2000-desktop.jpg') ;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            color: #000;
+            padding: 62px;
+            border-radius: 8px;
+            box-shadow: -5px -4px 35px -1px rgba(96,35,11,0.79) inset;
+            -webkit-box-shadow: -5px -4px 35px -1px rgba(96,35,11,0.79) inset;
+            -moz-box-shadow: -5px -4px 35px -1px rgba(96,35,11,0.79) inset;
+            width: 100%;
+            height: 600px;
+            /* Set the width to 100% */
+            max-width: 600px;
+            /* Add a max-width for better readability */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        div {
+            width: 48%;
+            /* Set the width of divs to create two in each row */
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            /* Set the width of inputs to 100% */
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #whatsapp-icon {
+            position: fixed;
+            bottom: 45px;
+            left: 6px;
+            z-index: 1000;
+        }
+
+        #whatsapp-icon img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .button-85 {
+            padding: 1.6em 3em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-left: 300px;
+            margin-top: 6px;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        .end{
+            font-size: 14px;
+            font-weight: 400;
+            color: #434542;
+        }
+        .logo img {
+            position: fixed;
+            left: 4px;
+            top: 1px;
+            width: 35vh;
+            height: 10vh;
+            max-height: 178px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+  
+    <div class="logo">
+        <a href="file:///C:/Users/niraj%20singh/Desktop/project/firstpage.html">
+        <img src="LOGO.jpg" alt="Logo"></a>
+    </div>
+
+    <form action="file:///C:/Users/niraj%20singh/Desktop/project/Newbook.html#" method="post">
+        <h1>For any query<br><img src="./Book Your Trip_files/call.svg"><a style="text-decoration: none;" href="tel:8382085044">+918382085044</a></h1>
+        <h1 style="font-size: 30px;color:red">Book Your Trip</h1>
+        <br>
+
+        <div>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required="">
+        </div>
+
+        <div>
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required="">
+        </div>
+
+        <div>
+            <label for="destination">Where to Go:</label>
+            <select id="destination" name="destination" required="">
+                <option value="" disabled="" selected="">Select</option>
+                <option value="paris">Manali</option>
+                <option value="newyork">Shimla</option>
+                <option value="tokyo">Dayaya bugyal</option>
+                <option value="paris">Tungnath</option>
+                <option value="newyork">Leh ladhak</option>
+                <option value="tokyo">Kedarkantha</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="departure">Departure From:</label>
+            <select id="departure" name="departure" required="">
+                <option value="" disabled="" selected="">Departure</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="countryCode">Country Code:</label>
+            <select id="countryCode" name="countryCode" required="">
+                <option value="" disabled="" selected="">Select Country Code</option>
+                <option data-countrycode="DZ" value="213">Algeria (+213)</option>
+		<option data-countrycode="AD" value="376">Andorra (+376)</option>
+		<option data-countrycode="AO" value="244">Angola (+244)</option>
+		<option data-countrycode="AI" value="1264">Anguilla (+1264)</option>
+		<option data-countrycode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+		<option data-countrycode="AR" value="54">Argentina (+54)</option>
+		<option data-countrycode="AM" value="374">Armenia (+374)</option>
+		<option data-countrycode="AW" value="297">Aruba (+297)</option>
+		<option data-countrycode="AU" value="61">Australia (+61)</option>
+		<option data-countrycode="AT" value="43">Austria (+43)</option>
+		<option data-countrycode="AZ" value="994">Azerbaijan (+994)</option>
+		<option data-countrycode="BS" value="1242">Bahamas (+1242)</option>
+		<option data-countrycode="BH" value="973">Bahrain (+973)</option>
+		<option data-countrycode="BD" value="880">Bangladesh (+880)</option>
+		<option data-countrycode="BB" value="1246">Barbados (+1246)</option>
+		<option data-countrycode="BY" value="375">Belarus (+375)</option>
+		<option data-countrycode="BE" value="32">Belgium (+32)</option>
+		<option data-countrycode="BZ" value="501">Belize (+501)</option>
+		<option data-countrycode="BJ" value="229">Benin (+229)</option>
+		<option data-countrycode="BM" value="1441">Bermuda (+1441)</option>
+		<option data-countrycode="BT" value="975">Bhutan (+975)</option>
+		<option data-countrycode="BO" value="591">Bolivia (+591)</option>
+		<option data-countrycode="BA" value="387">Bosnia Herzegovina (+387)</option>
+		<option data-countrycode="BW" value="267">Botswana (+267)</option>
+		<option data-countrycode="BR" value="55">Brazil (+55)</option>
+		<option data-countrycode="BN" value="673">Brunei (+673)</option>
+		<option data-countrycode="BG" value="359">Bulgaria (+359)</option>
+		<option data-countrycode="BF" value="226">Burkina Faso (+226)</option>
+		<option data-countrycode="BI" value="257">Burundi (+257)</option>
+		<option data-countrycode="KH" value="855">Cambodia (+855)</option>
+		<option data-countrycode="CM" value="237">Cameroon (+237)</option>
+		<option data-countrycode="CA" value="1">Canada (+1)</option>
+		<option data-countrycode="CV" value="238">Cape Verde Islands (+238)</option>
+		<option data-countrycode="KY" value="1345">Cayman Islands (+1345)</option>
+		<option data-countrycode="CF" value="236">Central African Republic (+236)</option>
+		<option data-countrycode="CL" value="56">Chile (+56)</option>
+		<option data-countrycode="CN" value="86">China (+86)</option>
+		<option data-countrycode="CO" value="57">Colombia (+57)</option>
+		<option data-countrycode="KM" value="269">Comoros (+269)</option>
+		<option data-countrycode="CG" value="242">Congo (+242)</option>
+		<option data-countrycode="CK" value="682">Cook Islands (+682)</option>
+		<option data-countrycode="CR" value="506">Costa Rica (+506)</option>
+		<option data-countrycode="HR" value="385">Croatia (+385)</option>
+		<option data-countrycode="CU" value="53">Cuba (+53)</option>
+		<option data-countrycode="CY" value="90392">Cyprus North (+90392)</option>
+		<option data-countrycode="CY" value="357">Cyprus South (+357)</option>
+		<option data-countrycode="CZ" value="42">Czech Republic (+42)</option>
+		<option data-countrycode="DK" value="45">Denmark (+45)</option>
+		<option data-countrycode="DJ" value="253">Djibouti (+253)</option>
+		<option data-countrycode="DM" value="1809">Dominica (+1809)</option>
+		<option data-countrycode="DO" value="1809">Dominican Republic (+1809)</option>
+		<option data-countrycode="EC" value="593">Ecuador (+593)</option>
+		<option data-countrycode="EG" value="20">Egypt (+20)</option>
+		<option data-countrycode="SV" value="503">El Salvador (+503)</option>
+		<option data-countrycode="GQ" value="240">Equatorial Guinea (+240)</option>
+		<option data-countrycode="ER" value="291">Eritrea (+291)</option>
+		<option data-countrycode="EE" value="372">Estonia (+372)</option>
+		<option data-countrycode="ET" value="251">Ethiopia (+251)</option>
+		<option data-countrycode="FK" value="500">Falkland Islands (+500)</option>
+		<option data-countrycode="FO" value="298">Faroe Islands (+298)</option>
+		<option data-countrycode="FJ" value="679">Fiji (+679)</option>
+		<option data-countrycode="FI" value="358">Finland (+358)</option>
+		<option data-countrycode="FR" value="33">France (+33)</option>
+		<option data-countrycode="GF" value="594">French Guiana (+594)</option>
+		<option data-countrycode="PF" value="689">French Polynesia (+689)</option>
+		<option data-countrycode="GA" value="241">Gabon (+241)</option>
+		<option data-countrycode="GM" value="220">Gambia (+220)</option>
+		<option data-countrycode="GE" value="7880">Georgia (+7880)</option>
+		<option data-countrycode="DE" value="49">Germany (+49)</option>
+		<option data-countrycode="GH" value="233">Ghana (+233)</option>
+		<option data-countrycode="GI" value="350">Gibraltar (+350)</option>
+		<option data-countrycode="GR" value="30">Greece (+30)</option>
+		<option data-countrycode="GL" value="299">Greenland (+299)</option>
+		<option data-countrycode="GD" value="1473">Grenada (+1473)</option>
+		<option data-countrycode="GP" value="590">Guadeloupe (+590)</option>
+		<option data-countrycode="GU" value="671">Guam (+671)</option>
+		<option data-countrycode="GT" value="502">Guatemala (+502)</option>
+		<option data-countrycode="GN" value="224">Guinea (+224)</option>
+		<option data-countrycode="GW" value="245">Guinea - Bissau (+245)</option>
+		<option data-countrycode="GY" value="592">Guyana (+592)</option>
+		<option data-countrycode="HT" value="509">Haiti (+509)</option>
+		<option data-countrycode="HN" value="504">Honduras (+504)</option>
+		<option data-countrycode="HK" value="852">Hong Kong (+852)</option>
+		<option data-countrycode="HU" value="36">Hungary (+36)</option>
+		<option data-countrycode="IS" value="354">Iceland (+354)</option>
+		<option data-countrycode="IN" value="91">India (+91)</option>
+		<option data-countrycode="ID" value="62">Indonesia (+62)</option>
+		<option data-countrycode="IR" value="98">Iran (+98)</option>
+		<option data-countrycode="IQ" value="964">Iraq (+964)</option>
+		<option data-countrycode="IE" value="353">Ireland (+353)</option>
+		<option data-countrycode="IL" value="972">Israel (+972)</option>
+		<option data-countrycode="IT" value="39">Italy (+39)</option>
+		<option data-countrycode="JM" value="1876">Jamaica (+1876)</option>
+		<option data-countrycode="JP" value="81">Japan (+81)</option>
+		<option data-countrycode="JO" value="962">Jordan (+962)</option>
+		<option data-countrycode="KZ" value="7">Kazakhstan (+7)</option>
+		<option data-countrycode="KE" value="254">Kenya (+254)</option>
+		<option data-countrycode="KI" value="686">Kiribati (+686)</option>
+		<option data-countrycode="KP" value="850">Korea North (+850)</option>
+		<option data-countrycode="KR" value="82">Korea South (+82)</option>
+		<option data-countrycode="KW" value="965">Kuwait (+965)</option>
+		<option data-countrycode="KG" value="996">Kyrgyzstan (+996)</option>
+		<option data-countrycode="LA" value="856">Laos (+856)</option>
+		<option data-countrycode="LV" value="371">Latvia (+371)</option>
+		<option data-countrycode="LB" value="961">Lebanon (+961)</option>
+		<option data-countrycode="LS" value="266">Lesotho (+266)</option>
+		<option data-countrycode="LR" value="231">Liberia (+231)</option>
+		<option data-countrycode="LY" value="218">Libya (+218)</option>
+		<option data-countrycode="LI" value="417">Liechtenstein (+417)</option>
+		<option data-countrycode="LT" value="370">Lithuania (+370)</option>
+		<option data-countrycode="LU" value="352">Luxembourg (+352)</option>
+		<option data-countrycode="MO" value="853">Macao (+853)</option>
+		<option data-countrycode="MK" value="389">Macedonia (+389)</option>
+		<option data-countrycode="MG" value="261">Madagascar (+261)</option>
+		<option data-countrycode="MW" value="265">Malawi (+265)</option>
+		<option data-countrycode="MY" value="60">Malaysia (+60)</option>
+		<option data-countrycode="MV" value="960">Maldives (+960)</option>
+		<option data-countrycode="ML" value="223">Mali (+223)</option>
+		<option data-countrycode="MT" value="356">Malta (+356)</option>
+		<option data-countrycode="MH" value="692">Marshall Islands (+692)</option>
+		<option data-countrycode="MQ" value="596">Martinique (+596)</option>
+		<option data-countrycode="MR" value="222">Mauritania (+222)</option>
+		<option data-countrycode="YT" value="269">Mayotte (+269)</option>
+		<option data-countrycode="MX" value="52">Mexico (+52)</option>
+		<option data-countrycode="FM" value="691">Micronesia (+691)</option>
+		<option data-countrycode="MD" value="373">Moldova (+373)</option>
+		<option data-countrycode="MC" value="377">Monaco (+377)</option>
+		<option data-countrycode="MN" value="976">Mongolia (+976)</option>
+		<option data-countrycode="MS" value="1664">Montserrat (+1664)</option>
+		<option data-countrycode="MA" value="212">Morocco (+212)</option>
+		<option data-countrycode="MZ" value="258">Mozambique (+258)</option>
+		<option data-countrycode="MN" value="95">Myanmar (+95)</option>
+		<option data-countrycode="NA" value="264">Namibia (+264)</option>
+		<option data-countrycode="NR" value="674">Nauru (+674)</option>
+		<option data-countrycode="NP" value="977">Nepal (+977)</option>
+		<option data-countrycode="NL" value="31">Netherlands (+31)</option>
+		<option data-countrycode="NC" value="687">New Caledonia (+687)</option>
+		<option data-countrycode="NZ" value="64">New Zealand (+64)</option>
+		<option data-countrycode="NI" value="505">Nicaragua (+505)</option>
+		<option data-countrycode="NE" value="227">Niger (+227)</option>
+		<option data-countrycode="NG" value="234">Nigeria (+234)</option>
+		<option data-countrycode="NU" value="683">Niue (+683)</option>
+		<option data-countrycode="NF" value="672">Norfolk Islands (+672)</option>
+		<option data-countrycode="NP" value="670">Northern Marianas (+670)</option>
+		<option data-countrycode="NO" value="47">Norway (+47)</option>
+		<option data-countrycode="OM" value="968">Oman (+968)</option>
+		<option data-countrycode="PW" value="680">Palau (+680)</option>
+		<option data-countrycode="PA" value="507">Panama (+507)</option>
+		<option data-countrycode="PG" value="675">Papua New Guinea (+675)</option>
+		<option data-countrycode="PY" value="595">Paraguay (+595)</option>
+		<option data-countrycode="PE" value="51">Peru (+51)</option>
+		<option data-countrycode="PH" value="63">Philippines (+63)</option>
+		<option data-countrycode="PL" value="48">Poland (+48)</option>
+		<option data-countrycode="PT" value="351">Portugal (+351)</option>
+		<option data-countrycode="PR" value="1787">Puerto Rico (+1787)</option>
+		<option data-countrycode="QA" value="974">Qatar (+974)</option>
+		<option data-countrycode="RE" value="262">Reunion (+262)</option>
+		<option data-countrycode="RO" value="40">Romania (+40)</option>
+		<option data-countrycode="RU" value="7">Russia (+7)</option>
+		<option data-countrycode="RW" value="250">Rwanda (+250)</option>
+		<option data-countrycode="SM" value="378">San Marino (+378)</option>
+		<option data-countrycode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+		<option data-countrycode="SA" value="966">Saudi Arabia (+966)</option>
+		<option data-countrycode="SN" value="221">Senegal (+221)</option>
+		<option data-countrycode="CS" value="381">Serbia (+381)</option>
+		<option data-countrycode="SC" value="248">Seychelles (+248)</option>
+		<option data-countrycode="SL" value="232">Sierra Leone (+232)</option>
+		<option data-countrycode="SG" value="65">Singapore (+65)</option>
+		<option data-countrycode="SK" value="421">Slovak Republic (+421)</option>
+		<option data-countrycode="SI" value="386">Slovenia (+386)</option>
+		<option data-countrycode="SB" value="677">Solomon Islands (+677)</option>
+		<option data-countrycode="SO" value="252">Somalia (+252)</option>
+		<option data-countrycode="ZA" value="27">South Africa (+27)</option>
+		<option data-countrycode="ES" value="34">Spain (+34)</option>
+		<option data-countrycode="LK" value="94">Sri Lanka (+94)</option>
+		<option data-countrycode="SH" value="290">St. Helena (+290)</option>
+		<option data-countrycode="KN" value="1869">St. Kitts (+1869)</option>
+		<option data-countrycode="SC" value="1758">St. Lucia (+1758)</option>
+		<option data-countrycode="SD" value="249">Sudan (+249)</option>
+		<option data-countrycode="SR" value="597">Suriname (+597)</option>
+		<option data-countrycode="SZ" value="268">Swaziland (+268)</option>
+		<option data-countrycode="SE" value="46">Sweden (+46)</option>
+		<option data-countrycode="CH" value="41">Switzerland (+41)</option>
+		<option data-countrycode="SI" value="963">Syria (+963)</option>
+		<option data-countrycode="TW" value="886">Taiwan (+886)</option>
+		<option data-countrycode="TJ" value="7">Tajikstan (+7)</option>
+		<option data-countrycode="TH" value="66">Thailand (+66)</option>
+		<option data-countrycode="TG" value="228">Togo (+228)</option>
+		<option data-countrycode="TO" value="676">Tonga (+676)</option>
+		<option data-countrycode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+		<option data-countrycode="TN" value="216">Tunisia (+216)</option>
+		<option data-countrycode="TR" value="90">Turkey (+90)</option>
+		<option data-countrycode="TM" value="7">Turkmenistan (+7)</option>
+		<option data-countrycode="TM" value="993">Turkmenistan (+993)</option>
+		<option data-countrycode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+		<option data-countrycode="TV" value="688">Tuvalu (+688)</option>
+		<option data-countrycode="UG" value="256">Uganda (+256)</option>
+		<!-- <option data-countryCode="GB" value="44">UK (+44)</option> -->
+		<option data-countrycode="UA" value="380">Ukraine (+380)</option>
+		<option data-countrycode="AE" value="971">United Arab Emirates (+971)</option>
+		<option data-countrycode="UY" value="598">Uruguay (+598)</option>
+		<!-- <option data-countryCode="US" value="1">USA (+1)</option> -->
+		<option data-countrycode="UZ" value="7">Uzbekistan (+7)</option>
+		<option data-countrycode="VU" value="678">Vanuatu (+678)</option>
+		<option data-countrycode="VA" value="379">Vatican City (+379)</option>
+		<option data-countrycode="VE" value="58">Venezuela (+58)</option>
+		<option data-countrycode="VN" value="84">Vietnam (+84)</option>
+		<option data-countrycode="VG" value="84">Virgin Islands - British (+1284)</option>
+		<option data-countrycode="VI" value="84">Virgin Islands - US (+1340)</option>
+		<option data-countrycode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+		<option data-countrycode="YE" value="969">Yemen (North)(+969)</option>
+		<option data-countrycode="YE" value="967">Yemen (South)(+967)</option>
+		<option data-countrycode="ZM" value="260">Zambia (+260)</option>
+		<option data-countrycode="ZW" value="263">Zimbabwe (+263)</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="phoneNumber">Mobile Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" required="">
+        </div>
+
+        <div>
+            <label for="accommodation">Accommodation Type(hotel):</label>
+            <select id="accommodation" name="accommodation" required="">
+                <option value="" disabled="" selected="">select</option>
+                <option value="hotel">2 star</option>
+                <option value="apartment">3 star</option>
+                <option value="hostel">5 star</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="calendar">Select Month:</label>
+            <input type="month" id="calendar" name="calendar" required="">
+        </div>
+        <div>
+        <label for="message">Query:
+            <br>
+            <textarea id="message" name="message" rows="3" placeholder="enter your message" maxlength="500" required=""></textarea></label>
+            </div>
+        <button class="button-85" role="button" style="margin-left: 210px;">Get Callback</button>
+
+
+
+        <h1 class="end">*All prices shown on the website are tentative. Final prices will be shared by our partner agents based on your requirements.</h1>
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <div id="whatsapp-icon">
+        <a href="https://wa.me/8382085044" target="_blank">
+            <img src="data:image/jpeg;base64,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" alt="WhatsApp" width="70" height="70">
+        </a>
+    </div>
+
+
+</body></html>
