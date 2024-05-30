@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage </title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fbf7fa;
+        }
+
+        header {
+            background-color: #f06508a5;
+            color: #131313;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            position: absolute;
+            left: 2px;
+            top: -5px;
+            width: 138px;
+            height: 126px;
+            max-height: 178px;
+        }
+
+        .clog {
+            position: absolute;
+            right: 25px;
+            margin-top: -28px;
+            width: 35px;
+            max-width: 35px;
+
+        }
+
+        nav {
+            background-color: rgb(234, 47, 84);
+            color: #fff;
+            padding: 38px;
+            text-align: center;
+            position: sticky;
+            top: 0px;
+            z-index: 35;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .swiper-slide {
+            font-family: cursive;
+            text-align: center;
+            font-size: 50PX;
+            font-weight: bold;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            /nowwrap used to display all images in single row/
+            margin-top: 40px;
+
+        }
+
+        .gallery img {
+            width: 16.66%;
+            /* You may adjust this value based on your needs */
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            width: 400px;
+            height: 420px;
+
+
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .line {
+            width: 300px;
+            height: 8px;
+        }
+
+        footer {
+            background-color: #0e0e0e;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .down {
+            background-color: #0d2dcd;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footertop {
+            margin-bottom: 40px;
+        }
+
+        .uk-container {
+            display: flow-root;
+            box-sizing: border-box;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .uk-grid-medium {
+            margin-left: -30px;
+        }
+
+        .detail-social-icon {
+            padding: 18px 0;
+        }
+
+        .uk-flex-center {
+            justify-content: center;
+            filter: invert(100%);
+        }
+
+        .uk-flex {
+            display: flex;
+        }
+
+        ul {
+            box-sizing: border-box;
+        }
+
+        .uk-panel {
+            display: flow-root;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .nav-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+
+
+        .instagram-icon {
+            width: 30px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .description {
+            text-align: left;
+            display: inline-block;
+            height: auto;
+            margin: 0px 0px;
+            padding: 2px 7px;
+            margin-left: 5%;
+        }
+
+        .container {
+            display: flexbox;
+            grid-column-start: auto;
+        }
+
+        .abc {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: 38px;
+            right: 4px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        .ab {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: -7px;
+            right: 4px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        .abc:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+
+        .ab:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+
+
+        .efg {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: 547px;
+            right: -6px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        .efg:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+
+        .uk-margin-small-bottom {
+            margin-bottom: 10px;
+            text-align: left;
+
+        }
+
+        .contact-text {
+            color: rgb(239, 236, 236);
+            text-align: left;
+        }
+
+        .ul {
+            margin-top: 2rem;
+            box-sizing: border-box;
+
+        }
+
+        .box-office {
+            border: 2px solid black;
+            width: 25%;
+            float: left;
+        }
+
+        .line {
+            width: 300px;
+            height: 8px;
+        }
+
+        .line1 {
+            width: ;
+            height: 8px;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #121212;
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #121212;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            margin: 0px 0px;
+            padding: 0px 17px;
+        }
+
+        .btn {
+            background-color: #ee3038;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .btn12::before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-btn12 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .btn12::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        .slider-btn1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: #ee3038;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .slider-btn-left1 {
+            left: 10px;
+
+        }
+
+        .slider-btn-right1 {
+            right: 10px;
+
+        }
+
+        .mread,
+        .dread {
+            text-align: center;
+            color: #121212;
+            font-weight: bold;
+        }
+
+        .dread {
+            margin-bottom: 34px;
+        }
+
+        .title1 {
+            text-align: center;
+            color: #121212;
+            padding: 4px 1px;
+            margin: 0px 0px;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .description1 {
+            font-size: 14px;
+            text-align: justify;
+            color: black;
+            padding: 3px 6px;
+            /* line-height:1.5; */
+        }
+
+        .slider {
+            position: relative;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(29, 66, 97, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .slider-btn-left {
+            left: 10px;
+
+        }
+
+        .dd a:hover {
+            color: rgb(239, 210, 173);
+        }
+
+        .pp {
+            font-size: 20px;
+            text-align: left;
+            margin-left: 10px;
+
+            clear: both;
+
+            display: inline-block;
+            width: 35%;
+            margin: 7px 7px;
+            padding: 7px 7px;
+
+        }
+
+        .hh {
+            font-weight: bold;
+            font-size: italic;
+        }
+
+        .bord {
+            height: 350px;
+            color: #181a208d;
+            background-color: #faf8f836;
+            left: 10px;
+        }
+
+        iframe {
+            position: absolute;
+            right: 40px;
+            top: 1755px;
+        }
+
+        #tre {
+            display: inline-block;
+            width: 75%;
+            margin-left: 5px;
+            padding: 2px;
+            margin: 2px;
+            float: left;
+            position: absolute;
+            top: 1780px;
+            left: 10px;
+        }
+
+        .slider-btn-right {
+            right: 10px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #fbf7fa;
+        }
+
+        .btn12 {
+            border: 4px solid white;
+            background-color: rgb(227, 25, 66);
+            color: white;
+            margin: auto;
+            position: absolute;
+            right: 700px;
+            top: 400px;
+            margin: 10px 10px;
+            padding: 12px 16px;
+            border-radius: 15px;
+            font-weight: bold;
+            padding left: 15px;
+            padding right: 15px;
+            z-index: 45;
+        }
+
+        .ul-list {
+            list-style: none;
+            line-height: 2.3em;
+        }
+
+        .bord {
+            background-color: #fff;
+            color: black;
+
+        }
+
+        .hh {
+            font-family: cursive;
+            font-weight: strong;
+            margin-top: 102px;
+            margin-left: -251px;
+
+        }
+
+        .pp {
+            font-size: 16px;
+            line-height: 1.3em;
+            margin-left: -214px;
+        }
+
+        .mnb {
+            font-size: 40px;
+            color: #f80612;
+            margin-top: -140px;
+        }
+
+        #whatsapp-icon {
+            position: fixed;
+            bottom: 45px;
+            left: 6px;
+            z-index: 1000;
+        }
+
+        #whatsapp-icon img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+
+
+        .buttonClass9 {
+            font-size: 23px;
+            font-family: Arial;
+            width: 161px;
+            height: 52px;
+            border-width: 1px;
+            color: #fff;
+            border-color: #337bc4;
+            font-weight: bold;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            box-shadow: 3px 4px 0px 0px #1564ad;
+            text-shadow: 0px 0px 0px #f65003;
+            background: linear-gradient(#79bbff, #f82b02);
+        }
+
+        .buttonClass9:hover {
+            background: linear-gradient(#151516, #1c1c1d);
+        }
+
+        .dropdown {
+            display: none;
+
+            position: absolute;
+            background-color: rgb(234, 47, 84);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(240, 236, 236, 0.2);
+            z-index: 1;
+            right: 60px;
+            margin-top: 55px;
+            padding: 250px 433px;
+
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 80%;
+            left: 0;
+            width: 100%;
+            background-color: rgb(234, 47, 84);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+        .dropdown-columns {
+            display: flex;
+            margin-left: -530px;
+            margin-top: -217px;
+        }
+
+        .dropdown-column {
+            flex: 1;
+            padding: 14px;
+            border-right: 1px solid #180202;
+            height: 350px;
+            overflow-y: auto;
+        }
+
+        .active {
+            background-color: #fc2f06;
+            color: white;
+        }
+
+        .vcc:hover {
+
+
+            color: rgb(57, 8, 233);
+        }
+
+        .login-popup {
+            display: none;
+            position: absolute;
+            background-color: rgb(234, 47, 84);
+            padding: 0px;
+            border: 1px solid rgb(234, 47, 84);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 35;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -68px;
+            margin-right: 8px;
+        }
+
+        .clog:hover .login-popup {
+            display: block;
+
+        }
+
+        .PLAN {
+
+            /*  border: 4px solid white;*/
+            background-color: rgb(10, 149, 255);
+            color: white;
+            margin: auto;
+            
+            position: absolute;
+            right: 400px;
+            top: 400px;
+            margin: -25px -71px;
+            padding: 18px 65px;
+            border-radius: 15px;
+            font-weight: bolder;
+            font-size: 20px;
+            z-index: 45;
+
+        }
+
+        .video {
+            width: 25%;
+            margin-right: -585px;
+
+        }
+
+        .logo {
+            position: absolute;
+            background-color: white;
+            width: 316px;
+            height: 98px;
+            left: -12px;
+            top: 0px;
+        }
+
+        .logo img {
+            position: absolute;
+            left: 10px;
+            top: 24px;
+            width: 35vh;
+            height: 64px;
+            max-height: 178px;
+        }
+
+        .nav1 {
+            background-color: rgba(242, 244, 245, 0.944);
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            z-index: revert;
+
+        }
+
+        .nav1 a {
+            color: rgb(236, 8, 8);
+            margin: 0 105px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .down {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            justify-content: space-between;
+            padding: 10px 10px 30px 10px;
+            background-color: rgb(12, 12, 12);
+        }
+
+        footer {
+            background-color: #00030a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-weight: 400px;
+            bottom: 0;
+            width: 100%;
+
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .but {
+            border-radius: 24px;
+            border-color: aqua;
+            width: 101px;
+            height: 35px;
+
+            background-color: aquamarine;
+        }
+
+        .mm {
+            display: inline;
+            text-decoration: none;
+            font-size: 23px;
+            line-height: 1.5;
+            color: rgb(248, 247, 249);
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <nav>
+        <div class="logo">
+            <a href="firstpage.html">
+                <img src="LOGO.jpg">
+            </a>
+        </div>
+
+
+        <a href="firstpage.html" style="margin-left: 870px;">Home</a>
+        <a href="aboutus.html">About us</a>
+        <a href="newgallery.html">Gallery</a>
+        <a href="trek.html" class="efg" id="trekLink">
+            All Trek
+        </a>
+        <a href="newcontact.html">Contact us</a>
+        <div class="clog">
+            <a href="login.html">
+                <img src="https://pic.onlinewebfonts.com/thumbnails/animations_258083.svg?width=12"></a>
+            <div class="login-popup">Login</div>
+        </div>
+
+
+        <!-- Dropdown content -->
+
+        <div class="dropdown" id="dropdown">
+            <div class="dropdown-columns">
+                <div class="dropdown-column">
+                    <h1><u>Months</u></h1>
+                    <br>
+
+
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">January</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">february</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">March</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">April</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">May</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">June</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">July</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">August</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">September</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">October</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">November</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">December</a>
+                    <br>
+                </div>
+                <div class="dropdown-column">
+                    <h1><u>Season</u></h1>
+                    <br>
+
+
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Winter
+                        Treks</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Spring
+                        Treks</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Summer
+                        Trek</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Monsoon
+                        Trek</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Autumn
+                        Treks</a>
+                </div>
+                <div class="dropdown-column">
+
+                    <h1><u>Region/States</u></h1>
+                    <br>
+
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc"></a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Andhra
+                        pradesh</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Bihar</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Delhi</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Goa</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">Gujarat</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">Haryana</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Jammu and
+                        Kashmir</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Uttar
+                        Pradesh </a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">Uttarakhand</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">West
+                        Bengal</a>
+                </div>
+
+                <div class="dropdown-column">
+                    <h1><u>Trek By Name</u></h1>
+                    <a href="nainital.html"></a>
+                    <br>
+                    <a href="DayaraBugyal.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">Dayara Bugyal</a>
+                    <br>
+                    <a href="Kedarnath.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">Kedarnath</a>
+                    <br>
+                    <a href="Leh ladhak.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Leh
+                        ladhak</a>
+                    <br>
+                    <a href="manali.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Manali</a>
+                    <br>
+                    <a href="Simala.html" style="margin-left: 5px;font-size:20px;font-weight:400" class="vcc">Shimla</a>
+                    <br>
+
+                    <a href="Tungnath.html" style="margin-left: 5px;font-size:20px;font-weight:400"
+                        class="vcc">Tungnath</a>
+                    <br>
+
+
+                </div>
+
+                <div class="dropdown-column">
+                    <a href="nainital.html">Nainital</a>
+                    <br>
+                    <a href="darjeeling.html">Darjeeling</a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Show dropdown on mouseenter for "Trek" link
+            $("#trekLink").mouseenter(function () {
+                $(".dropdown").slideDown();
+            });
+            // Hide dropdown on mouseleave for both "Trek" link and dropdown
+            $("nav").mouseleave(function () {
+                $(".dropdown").slideUp();
+            });
+        });
+    </script>
+
+
+    <!-- Swiper Container -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"
+                style="background-image: url('https://static.vecteezy.com/system/resources/previews/023/435/445/original/landing-page-design-with-illustration-of-female-and-male-tourist-planning-to-next-trip-on-beach-view-background-vector.jpg');">
+                <h1 style="font-size: 30px;color:#f80612"></h1><button class="PLAN"><a href="trek.html"> PLAN YOUR
+                        TRIP</a></button>
+            </div>
+            <div class="swiper-slide" style="background-image: url('https://trekthehimalayas.com/wp-content/uploads/2023/10/Bhrigu-Lake1.webp'); background-size: cover;
+                background-position: center;">
+                <h1 style="font-size: 38px;color:#fd1909;margin-top:-130px">Manali</h1><button class="btn12"><a
+                        href="manali.html">Explore</a></button>
+            </div>
+            <div class="swiper-slide"
+                style="background-image: url('https://wallpapers.com/images/hd/kedarnath-temple-banners-4k-9pd6c84fjldyenjg.jpg'); height:100%;">
+                <h1 style="font-size: 41px;color:#f80612;margin-top:-430px;">Kadaranath</h1><button class="btn12"><a
+                        href="Kedarnath.html">Explore</a></button>
+            </div>
+            <div class="swiper-slide"
+                style="background-image: url('https://e0.pxfuel.com/wallpapers/382/218/desktop-wallpaper-leh-ladakh-holidays.jpg');">
+                <h1 style="font-size: 34px;color:#f80612">Leh ladhak:The Roof of the World</h1><button class="btn12"><a
+                        href="Leh ladhak.html">Explore</a></button>
+            </div>
+            <div class="swiper-slide"
+                style="background-image: url('https://www.oyorooms.com/blog/wp-content/uploads/2017/11/shutterstock_601299908-min.jpg');">
+                <h1 style="font-size: 35px;color:#f80612;margin-top:-425px">Shimla</h1><button class="btn12"><a
+                        href="Simala.html">Explore</a></button>
+            </div>
+            <div class="swiper-slide" style="background-image: url('https://wallpapercave.com/wp/wp8599534.jpg');">
+                <h1 style="font-size: 37px;color:#f80612;margin-top:-330px;">Tungnath</h1><button class="btn12"><a
+                        href="Tungnath.html">Explore</a></button>
+            </div>
+            <div class="swiper-slide"
+                style="background-image: url('https://himalayandreamtreks.in/wp-content/uploads/Dayara/Dayara-Bugyal-In-January.jpg');">
+                <h1 class="mnb">DayaraBugyal</h1><button class="btn12"><a href="DayaraBugyal.html">Explore</a></button>
+            </div>
+            <!--add more images if want-->
+        </div>
+        <!-- Add Pagination -->
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- End Swiper Container -->
+
+    <div class="gallery">
+        <a href="Kedarnath.html">
+            <img src="https://wallpapers.com/images/hd/kedarnath-temple-tourists-4k-f3cusz8bzfqat2nh.jpg"
+                alt="ladakh"></a>
+        <a href="manali.html">
+            <img src="https://images.unsplash.com/photo-1579689217062-f66443381e24?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbmFsaXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="Gallery Image 2"></a>
+        <a href="Leh ladhak.html">
+            <img src="https://wallpapercave.com/wp/wp7029009.png" alt="Gallery Image 3"></a>
+    </div>
+
+    <section class="mb-5 mt-5 mb-md-0">
+        <h2 class="mread">Treks in India: Dive into Our Must-Read Article Collection</h2>
+        <img class="line1" src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+            alt="separator">
+        <div class="slider">
+            <div class="slider-container">
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src="1stimage.jpg"
+                            alt="Experientarning on a Trek: Insights from TLs">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Experiential Learning on a Trek: Insights from TLs</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <p class="card-text description1">Trekking in the Himalayas is more than just an adventure.
+                                You not only experience adventure and thrill but also get to learn a lot of things.
+                                Being in the wilderness pushes people out of their...</p>
+
+                            <a href="soon.png">
+                                <p style="margin-left: 4px;color:black">To explore the full trek article <b
+                                        style="color:red;text-decoration:underline"> Read More</b></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src="2ndimage.jpg"
+                            alt="What to Expect &#038; How to Prepare for Kedarkantha Trek">
+                        <div class="card-body">
+                            <h3 class="card-title title1">What to Expect &#038; How to Prepare for Kedarkantha Trek</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <p class="card-text description1">Kedarkantha Trek is one of the most popular destinations
+                                for trekking in the Himalayas. The natural beauty surrounding the trek, its easy grade
+                                and accessibility makes it a favourite among...</p>
+
+                            <a href="soon.png">
+                                <p style="margin-left: 4px;color:black">To explore the full trek article <b
+                                        style="color:red;text-decoration:underline"> Read More</b></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src="3rdimages.jpg"
+                            alt="Snowfall in These Slopes Signal The Onset of Winter in the Himalayas">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Snowfall in These Slopes Signal The Onset of Winter in the
+                                Himalayas</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <p class="card-text description1">Winter in the Himalayas is a spectacular sight. Snow
+                                blankets the rugged peaks, the lush valleys and the forests in layers. The already
+                                majestic Himalayas seem to be transformed into an even more...</p>
+
+                            <a href="soon.png">
+                                <p style="margin-left: 4px;color:black">To explore the full trek article <b
+                                        style="color:red;text-decoration:underline"> Read More</b></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src="4rdimages.jpg"
+                            alt="Do&#8217;s and Don&#8217;ts for Kedarkantha Trek">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Do&#8217;s and Don&#8217;ts for Kedarkantha Trek</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <p class="card-text description1">Located within the confines of the Garhwal Himalayas,
+                                Kedarakantha is your quintessential winter trek. The trek is suitable for trekkers of
+                                all experience levels and introduces you to the true beauty...</p>
+
+                            <a href="soon.png">
+                                <p style="margin-left: 4px;color:black">To explore the full trek article <b
+                                        style="color:red;text-decoration:underline"> Read More</b></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top:20px">
+                    <div class="card" style="width:27rem ;height:30rem;margin-left:0px;border-radius:20px">
+                        <img class="card-img-top" style="height:45%;" src="2ndimage.jpg"
+                            alt="Why Kedarkantha Trek is a perfect trek for Beginners?">
+                        <div class="card-body">
+                            <h3 class="card-title title1">Why Kedarkantha Trek is a perfect trek for Beginners?</h3>
+                            <img class="line"
+                                src="https://trekthehimalayas.com/wp-content/themes/TTH-ByClaruz/assets1/red line.png"
+                                style="margin-top:2px!important" alt="separator">
+                            <p class="card-text description1">Trekking in India has become immensely popular over the
+                                years with many beautiful trekking locations to choose from. The diverse terrain of the
+                                Himalayan Ranges offers incredible opportunities for...</p>
+
+                            <a href="soon.png">
+                                <p style="margin-left: 4px;color:black">To explore the full trek article <b
+                                        style="color:red;text-decoration:underline"> Read More</b></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn slider-btn-left">&#8249;</button>
+            <button class="slider-btn slider-btn-right">&#8250;</button>
+        </div>
+    </section>
+    <section class="bord">
+        <div id="tree">
+            <div id="tre">
+                <h3 class="hh"><u>Why should you choose us?</u></h3>
+                <p class="pp">Trekking is just another synonym for walking. Even so, the term trekking has largely been
+                    attributed to a type of walking that takes you along routes that are usually up, down, over, and
+                    around hills and mountains. By the end of this article, you will know what trekking is exactly,
+                    trekking in India for beginners as well as for experts, so, solo trekking in India, and top 5
+                    trekking places in India. There are also a few FAQs that we have answered towards the end for your
+                    convenience. Happy Reading!</p>
+            </div>
+            <video class="video" controls>
+                <source src="manalivedio1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    </section>
+
+    <script>
+
+        const container = document.querySelector(".slider-container");
+        const leftButton = document.querySelector(".slider-btn-left");
+        const rightButton = document.querySelector(".slider-btn-right");
+
+        // Function to move the slider to the left
+        const moveLeft = () => {
+            container.scrollBy({
+                left: -300, // Adjust the scroll distance as needed
+                behavior: "smooth",
+            });
+        };
+
+        // Function to move the slider to the right
+        const moveRight = () => {
+            container.scrollBy({
+                left: 300, // Adjust the scroll distance as needed
+                behavior: "smooth",
+            });
+        };
+
+        // Attach click event listeners to the buttons
+        leftButton.addEventListener("click", moveLeft);
+        rightButton.addEventListener("click", moveRight);
+
+    </script>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000, // Delay between transitions in milliseconds
+                disableOnInteraction: false, // Continue to autoplay even when user interacts with the slider
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
+
+
+    <nav class="nav1">
+        <a href="firstpage.html">HOME</a>
+        <a href="newgallery.html">GALLERY</a>
+        <a href="trek.html">TREK</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </nav>
+    <div class="down">
+        <div class="col">
+            <strong style="font-size: 40px;color:red;"> Trek The भारत</strong>
+            <h1 style="color: rgb(253, 251, 251);font-size:20px;font-weight:400">For Explorers Everywhere</h1>
+            <br>
+            <h1 style="color: rgb(35, 3, 246);font-size:20px;">FOLLOW US</h1>
+            <a href="">
+                <svg enable-background="new 0 0 24 24" height="35" viewBox="0 0 24 24" width="30" fill="#3a5696">
+                    <path
+                        d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+                </svg></a>
+            <a href="">
+                <svg width="30" height="36" fill="#2ba6df" viewBox="0 0 16 16">
+                    <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                </svg>
+            </a>
+
+
+            <a href="">
+                <img src="https://www.holidify.com/res/images/Instagram-Logo.png" alt="instagram"
+                    style="height:31px;width:31px"></a>
+            <br>
+            <br>
+
+            <h1 style="font-size: 20px;color:blue">
+                Join Trek The भारत <br>community of travelers
+            </h1>
+            <button class="but"><a href="newregister.html"
+                    style="font-size: 14px;text-decoration:none; color:#333;">Register
+                    now</a></button>
+        </div>
+        <div class="col">
+            <h1 style="color: red;">TOP DESTINATION</h1>
+
+            <a href="manali.html" class="mm">Manali</a>
+            <br>
+            <a href="Simala.html" class="mm">Shimla</a><br>
+            <a href="Kedarnath.html" class="mm">Kedaranath</a><br>
+            <a href="DayaraBugyal.html" class="mm">dayara Bugyal</a><br>
+            <a href="Kedarnath.html" class="mm">Kedarnath </a><br>
+            <a href="Tungnath.html" class="mm">Tungnath</a><br>
+
+        </div>
+        <div class="col">
+            <h1 style="color:red">About Us</h1>
+            <br>
+            <a href="aboutus.html" class="mm">About Trek The भारत </a><br>
+            <a href="newcontact.html" class="mm">Contact Us</a><br>
+            <a href="terms.html" class="mm">Terms and Conditions</a><br>
+
+
+
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Trek The भारत .All rights reserved. No part of this site may be reproduced without our written
+        permission.
+    </footer>
+
+</body>
+
+</html>
+
+
+<a href="newcontact.html" class="abc">
+    contact us
+
+</a>
+<br>
+<a href="#" class="ab">
+    Go top
+
+</a>
+<br>

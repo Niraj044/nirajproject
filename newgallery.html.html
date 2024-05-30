@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f13131;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .destination-select {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #4405f3;
+            color: #fff;
+        }
+        #whatsapp-icon {
+            position: fixed;
+            bottom: 45px;
+            left: 6px;
+            z-index: 1000;
+        }
+
+        #whatsapp-icon img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .q {
+            text-decoration: none;
+            background-color: rgb(234, 47, 84);
+            color: white;
+            position: fixed;
+            bottom: 38px;
+            right: 4px;
+            border: 4px solid white;
+            margin: 10PX 10PX;
+            padding: 10PX 10PX;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+    
+
+        .q:hover {
+            border-color: rgb(255, 44, 86);
+            background-color: white;
+            color: rgb(255, 44, 86);
+        }
+      
+        .logo img {
+            position: absolute;
+            left: 2px;
+            top: -5px;
+            width: 40vh;
+            height: 126px;
+            max-height: 178px;
+        }
+        nav {
+            background-color: rgb(234, 47, 84);
+            color: #fff;
+            padding: 38px;
+            text-align: center;
+            position: sticky;
+            top: 0px;
+            z-index: 35;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="firstpage.html">
+                <img src="LOGO.jpg" alt="Logo"></a>
+        </div>
+        <h1 style="font-size: 36px;">Gallery</h1>
+    </nav>
+
+    <div class="destination-select">
+        <label for="destination">Select Destination:</label>
+        <select id="destination" onchange="showImages()">
+            <option value="Dayara Bugyal">Dayara Bugyal</option>
+            <option value="kedarnath">kedarnath</option>
+            <option value="Leh ladhak">Leh ladhak</option>
+            <option value="Manali">Manali</option>
+            <option value="Shimla">Shimla</option>
+            <option value="Tungnath">Tungnath</option>
+
+        </select>
+    </div>
+
+    <div class="gallery" id="imageGallery">
+        <!-- Images will be dynamically loaded here based on user selection -->
+    </div>
+
+    <footer>
+        &copy; 2024 Your Tourist Website. All rights reserved.
+    </footer>
+
+    <script>
+        function showImages() {
+            var selectedDestination = document.getElementById("destination").value;
+            var gallery = document.getElementById("imageGallery");
+            gallery.innerHTML = ""; // Clear existing images
+
+            // Define image URLs based on selected destination
+            var imageUrls = getImageUrls(selectedDestination);
+
+            // Create image elements and append to the gallery
+            imageUrls.forEach(function (imageUrl) {
+                var img = document.createElement("img");
+                img.src = imageUrl;
+                img.alt = "Tourist Destination";
+                gallery.appendChild(img);
+            });
+        }
+
+        function getImageUrls(destination) {
+            // Define image URLs for each destination
+            switch (destination) {
+                case "Dayara Bugyal":
+                    return ["https://himalayandreamtreks.in/wp-content/uploads/Dayara/Gangotri-ranges-visible-from-Dayara-Bugyal.jpg",
+                        "https://images.prismic.io/indiahike/3df99ba8-9e7c-4664-be35-f0ab7b721067_Ali+Bedni_AB_Roopkund_Sandhya+UC_Mt.Trishul_meadows_landscape_.jpg?auto=compress,format",
+                        "https://uttarakhandtriptrek.com/wp-content/uploads/2019/03/trek-to-dyara-bugyal.jpg",
+                        "https://findyouradventure.in/wp-content/uploads/2022/02/Dayara-Bugyal-Rakesh-Sir-12.jpg",
+                        "https://www.tourmyindia.com/treks/wp-content/uploads/2020/08/dayara-bugyal-trek-f.jpg",
+                        "https://trekthehimalayas.com/wp-content/uploads/2023/10/Dayara-Bugyal-3-1.webp",
+                        "https://www.euttaranchal.com/tourism/photos/bedni-ali-bugyal-7356595.jpg",
+                        "https://nomadsofindia.com/wp-content/uploads/2023/07/Dayara-Bugyal-in-the-Winter-Season-1200x900.jpg",
+                        "https://whitemagicadventure.com/sites/default/files/tripmain/Dayara%20Bugyal%20Trek.JPG",
+                        "https://images.prismic.io/indiahike/90397936-2c59-48d7-a5e2-5a1efcac5a0d_Dayara-Bugyal_DB_Sudheer-Hegde-Frozen-Gui-Lake-1.jpg?auto=compress,format",
+                        "https://vl-prod-static.b-cdn.net/system/images/000/543/332/d1fc9a03e1c585604f757cbb574fd854/original/dayara-bugyal-trek.jpg?1662872965",
+                        "https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_1316/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1614776325%2Fwerwq1dhzla3ijc6qmlt.jpg",
+                        "https://rishikeshdaytour.com/blog/wp-content/uploads/2022/12/Dayara-Bugyal-Trek.jpg",
+                        "https://images.prismic.io/indiahike/34edaaf9-a728-43a8-8a93-2cb3319a4908_Phulara+Ridge_Jothiranjan_Indiahikes+%285%29.jpeg?auto=compress,format",
+                        "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/sojb0prdih1tvfzylwmr/4D3N%20Dayara%20Bugyal%20Trek%20from%20Haridwar%2C%20India.jpg",
+                        "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://ecoplore.com/wp-content/uploads/2021/06/61347574_565143884008778_6019450687442649088_n.jpeg",
+                        "https://www.team4adventure.com/wp-content/uploads/2021/01/dayara-bugyal-trek.jpg",
+                        "https://media.licdn.com/dms/image/C5612AQF85DcRCPrP-w/article-inline_image-shrink_1500_2232/0/1642345696078?e=1710374400&v=beta&t=pHqXRttZayejzqLX4uBmvw5imPBABcLqOXE6HFAQZLA",
+                        "https://www.thesearchingsouls.com/wp-content/uploads/2021/01/DB.jpg",
+                        "https://images.prismic.io/indiahike/2d4f2e8a-5bce-45e3-8fcc-352124346514_Dayara+Bugyal+-+Anubhav+Bhatt+-+Forest+trails+on+DAy+1+-+Indiahikes.png?auto=compress,format",
+                        "https://images.prismic.io/indiahike/32d31df8-c770-4f0e-b922-8b59bba02db6_Gidara+Bugyal+-+Izzat+Yaganagi+-+Indiahikes+-+November.jpg?auto=compress,format",
+                        "https://anthilladventures.com/wp-content/uploads/2023/08/cropped-IMG_20230818_093245-scaled-1.jpg",
+                        "https://www.trekyaari.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fslamseven%2Ftreks%2Ftr%3Aw-1280%2Ch-720%2Cf-avif%2FDayara_Bugyal_Trek_fKTFmghAx.jpeg&w=3840&q=75",
+                        "https://www.thesearchingsouls.com/wp-content/uploads/2020/11/Dayara.jpg",
+                        "https://shashishanbhag.com/wp-content/uploads/2022/12/Gidara-Bugyal-Trek_1.jpg",
+                        "https://assets.cntraveller.in/photos/61a648ddc0bbe30aec79ee70/16:9/w_1376,h_774,c_limit/Suraj%20Madhavi%20Daya%20Bugyal.jpeg",
+                        "https://images.prismic.io/indiahike/38b24bf4-c05b-4665-9c3d-704037f01278_Dayara+Bugyal_DB_Sudheer+Hegde-Trekking+to+Gui_forest_trekkers_.jpg?auto=compress,format",
+                        "https://images.prismic.io/indiahike/39dee544-b147-4b79-b69b-41ffbf639910_Gidara+bugyal_GB_Nithesh_Indiahikes_+%2877%29.jpg?auto=compress,format&rect=0,59,1600,967&w=1600&h=967",];
+                case "kedarnath":
+                    return ["https://wallpapers.com/images/featured/kedarnath-4k-9pd6c84fjldyenjg.jpg",
+                        "https://images.pexels.com/photos/15031440/pexels-photo-15031440.jpeg?cs=srgb&dl=pexels-alok-kumar-15031440.jpg&fm=jpg",
+                        "https://wallpapers.com/images/hd/kedarnath-temple-crowd-4k-x7v0dhhuw4ivif94.jpg",
+                        "https://wallpapers.com/images/hd/kedarnath-temple-tourists-4k-f3cusz8bzfqat2nh.jpg",
+                        "https://www.templeduniya.com/wp-content/uploads/2021/07/Project-51-6-min-1024x594-1.jpg",
+                        "https://wallpapercave.com/wp/wp11475985.jpg",
+                        "https://images.unsplash.com/photo-1612438214708-f428a707dd4e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2VkYXJuYXRofGVufDB8fDB8fHww",
+                        "https://wallpapers.com/images/hd/kedarnath-temple-fences-4k-20mjafmypuf2gqrn.jpg",
+                        "https://static.toiimg.com/photo/91509318.cms",
+                        "https://www.bontravelindia.com/wp-content/uploads/2022/12/Shri-Kedarnath-Dham-Temple-1000x565.jpg",
+                        "https://ddnews.gov.in/sites/default/files/kedarnath_0.jpg",
+                        "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201905/GettyImages-166731773.jpeg?size=1200:675",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/9e/9c/14/kedarnath-mandir.jpg?w=1200&h=-1&s=1",
+                        "https://5.imimg.com/data5/SELLER/Default/2023/2/FA/UR/JJ/130399419/wooden-kedarnath-mandir.jpeg",
+                        "https://www.euttaranchal.com/tourism/photos/kedarnath-2240900.jpg",
+                        "https://www.euttaranchal.com/tourism/photos/kedarnath-2802883.jpg",
+                        "https://www.yourvacationtrip.com/wp-content/uploads/2023/10/Kedarnath-Images-31.jpg",
+                        "https://www.euttaranchal.com/tourism/photos/kedarnath-temple-3618171.jpg",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/bf/6e/af/img-20190531-wa0032-largejpg.jpg?w=1200&h=1200&s=1",
+                        "https://www.euttaranchal.com/tourism/photos/kedarnath-9711722.jpg",];
+                case "Leh ladhak":
+                    return ["https://wallpapercave.com/wp/wp4527553.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445397232_img_4026.jpg",
+                        "https://findyouradventure.in/wp-content/uploads/2022/02/Manali-Leh-Ladakh-Bike-Tour.jpg",
+                        "https://live.staticflickr.com/1811/41156247490_037414a447_h.jpg",
+                        "https://images.pexels.com/photos/3392154/pexels-photo-3392154.jpeg?cs=srgb&dl=pexels-avinash-patel-3392154.jpg&fm=jpg",
+                        "https://www.indiantempletour.com/wp-content/uploads/2019/01/Leh-Ladakh-Package.webp",
+                        "https://i.ytimg.com/vi/vzjT8P3mID0/maxresdefault.jpg",
+                        "https://static.toiimg.com/photo/48112853.cms",
+                        "https://static.india.com/wp-content/uploads/2018/08/Ladakh-4-shutterstock_304846103-1.jpg?impolicy=Medium_Resize&w=1200&h=800",
+                        "https://storage.googleapis.com/stateless-www-justwravel-com/2017/07/Manali-to-ladakh-road-trip-JustWravel-13.jpg",
+                        "https://www.teahub.io/photos/full/242-2423564_leh-ladakh-images-hd.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445381108_img_0721_edited.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445372766_img_0132_edited.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445379928_img_0646_edite.jpg",
+                        "https://gouthamramesh.com/wp-content/uploads/2022/07/20220630-_GRZ1644-Edit-Edit-2-1920x1200.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1444369473_img_0058.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445387388_img_3604.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445384775_img_0805.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445382482_img_0739_edited.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445390208_img_3790.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445402542_img_4244.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445403414_img_4293.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445394753_img_3972.jpg",
+                        "https://static2.tripoto.com/media/filter/nl/img/200122/TripDocument/1445383981_img_0761.jpg",];
+                case "Manali":
+                    return ["https://images.unsplash.com/photo-1579689189009-874f5cac2db5?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFuYWxpfGVufDB8fDB8fHww",
+                        "https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2023/06/12/454395a36ab3a44149a03813fd0ab14c.jpg?quality=80&zoom=1&ssl=1",
+                        "https://kullumanali.org/wp-content/uploads/2019/12/bigstock-View-Landscape-Of-Himalaya-Mou-329797666.jpg",
+                        "https://www.oyorooms.com/travel-guide/wp-content/uploads/2022/03/A-List-of-Best-Affordable-Mall-Road-Manali-Hotels-1280x720.jpg",
+                        "https://www.euttaranchal.com/tourism/photos/manali-1107843.jpg",
+                        "https://www.euttaranchal.com/tourism/photos/manali-9861792.jpg",
+                        "https://live.staticflickr.com/8167/29421915136_8ac8e01c21_b.jpg",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/KM4pHMcKTuqm97Rp5H1hYA/zostel-manali-vashisht-20221111133810.jpg?h=400",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/ROamq7o5R6yDLHdwnwU52Q/zostel-manali-vashisht-20221111133844.jpg?h=400",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/bNrRuW2ARy6S_P_GMz8tnw/zostel-manali-vashisht-views-from-the-hoste_Is2LFtT.jpg?h=400",
+                        "https://www.wallpaperup.com/uploads/wallpapers/2014/09/02/433425/2cfdd71ddbc12a3ddb66b85e0003d263-700.jpg",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/3bmnC-R4S565Bae5StU-aQ/zostel-kasol-katagla-20230509095504.jpg?h=400",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/w2q0go6wSTaYNR5EpFnmQw/zostel-kasol-katagla-20230509095826.jpg?h=400",
+                        "https://captionswag.com/wp-content/uploads/2023/04/Manali-Captions-And-Quotes-For-Instagram.jpeg",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/WsZjlNOpS9eImbRSpVmtMg/zostel-manali-vashisht-views-from-the-hoste_S0tHwnd.jpg?h=400",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/3O2lekoQTt2HnewHoP4DUA/zostel-manali-vashisht-20221111133803.jpg?h=400",
+                        "https://media1.thrillophilia.com/filestore/dxudd92rjggoj11u39tutkzbg3px_1587924446_5246279.png",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/b-a_ID3PRDuUg8xVhU1rZw/zostel-manali-vashisht-20221111134420.jpg?h=400",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/v960oGq6SBa4xIzlxWzztQ/zostel-kasol-katagla-20230509095624.jpg?h=400",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/9rjq_uRlSj2qQXji-bN4Rg/zostel-manali-old-manali-20231018064136.jpg?h=400",
+                        "https://marvels.bro.gov.in/images/solangvalley/2.jpg",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/vVd78hbyS3ikadsTWT2dFg/zostel-manali-burwa-20221019140402.jpg",
+                        "https://www.euttaranchal.com/tourism/photos/manali-9202425.jpg",
+                        "https://img.cdn.zostel.com/zostel/gallery/images/dza59YA3RFOdeqGVTnsXgw/zostel-manali-old-manali-20231018064007.jpg?h=400",];
+                case "Shimla":
+                    return ["https://plus.unsplash.com/premium_photo-1697729690458-2d64ca777c04?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1598591880429-7559743bbefd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://shimlatourism.co.in/images/places-to-visit/headers/jakhu-temple-shimla-tourism-entry-fee-timings-holidays-reviews-header.jpg",
+                        "https://images.unsplash.com/photo-1567253523599-6302cfe64fac?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1609232530947-0aeb23338a43?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hpbWxhJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
+                        "https://images.unsplash.com/photo-1641735540732-34a34a6e018e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1589564972271-05f2cf7e772f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHNoaW1sYSUyMGluZGlhfGVufDB8fDB8fHww",
+                        "https://images.unsplash.com/photo-1585237757683-dc4035a3a049?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHNoaW1sYSUyMGluZGlhfGVufDB8fDB8fHww",
+                        "https://images.unsplash.com/photo-1624090350601-7ea146e1fa11?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHNoaW1sYSUyMGluZGlhfGVufDB8fDB8fHww",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/24/90/aa/larisa-resort-shimla.jpg?w=1200&h=-1&s=1",
+                        "https://images.unsplash.com/photo-1501702580495-ec0f3a4517b5?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://images.unsplash.com/photo-1625319386424-6343d782351a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHNoaW1sYSUyMGluZGlhfGVufDB8fDB8fHww",
+                        "https://images.unsplash.com/photo-1560633265-4cb212654bde?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQxfHxjaGFuZHJhc2hpbGElMkMlMjB0dW5nbmF0aCUyQyUyMGluZGlhfGVufDB8fDB8fHww",
+                        "https://images.unsplash.com/photo-1610178009236-02461f18b272?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHNoaW1sYSUyMGluZGlhfGVufDB8fDB8fHww",
+                        "https://plus.unsplash.com/premium_photo-1697729626072-d3d3e418c443?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "https://media2.thrillophilia.com/images/photos/000/254/188/original/1588920518_shutterstock_1611108550.jpg?",];
+                case "Tungnath":
+                    return ["https://www.euttaranchal.com/tourism/photos/tungnath-5173043.jpg",
+                        "https://www.euttaranchal.com/tourism/photos/dharchula-9732221.jpg",
+                        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/7a/56/c8/tungnath-temple.jpg?w=1200&h=1200&s=1",
+                        "https://moxtain.s3.ap-south-1.amazonaws.com/blogs/HighestLordShivaTempleTungnath/tungnath-temple-in-winter.JPG",
+                        "https://images.unsplash.com/photo-1547452377-b2ac40e02ed6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhbmRyYXNoaWxhJTJDJTIwdHVuZ25hdGglMkMlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+                        "https://images.unsplash.com/photo-1522506209496-4536d9020ec4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hhbmRyYXNoaWxhJTJDJTIwdHVuZ25hdGglMkMlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
+                        "https://static.toiimg.com/thumb/90976826/Tungnath.jpg?width=1200&height=900",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/tungnath-9173841.jpg&w=400&h=275",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/chopta-2888461.jpg&w=400&h=275",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/tungnath-5553616.jpg&w=400&h=275",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/116-1095315.jpg&w=400&h=275",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/tungnath-6365836.jpg&w=400&h=275",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/tungnath-7332115.jpg&w=400&h=275",
+                        "https://www.enlivetrips.com/uploads/posts/Tungnath%20Temple.jpg",
+                        "https://www.euttaranchal.com/tourism/timthumb.php?src=/tourism/photos/tungnath-1343618.jpg&w=400&h=275",
+                        "https://wallpaperaccess.com/full/6129468.jpg",];
+                default:
+                    return [];
+            }
+        }
+
+        // Initial load of images
+        showImages();
+    </script>
+</body>
+
+
+
+
+
+<a href="home.html" class="q">
+    Home
+
+</a>
+
+
+
+<div id="whatsapp-icon">
+    <a href="https://wa.me/+918382085044" target="_blank">
+        <img src="data:image/jpeg;base64,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"
+            alt="WhatsApp" width="70" height="70">
+    </a>
+</div>
